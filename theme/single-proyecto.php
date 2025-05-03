@@ -210,8 +210,8 @@ get_header(); ?>
             <?php endif; ?>
         </div>
 
-        <?php get_template_part('part-templates/cifras'); ?>
-        <?php get_template_part('part-templates/interesado'); ?>
+        <?php get_template_part('template-parts/layout/cifras'); ?>
+        <?php get_template_part('template-parts/layout/interesado'); ?>
     </div>
 </div>
 
