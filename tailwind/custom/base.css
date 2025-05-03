@@ -1,0 +1,193 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ */
+
+/**
+ * This uses the background and foreground colors declared in the `theme.json`
+ * file and is applied both to the front end and in the block editor.
+ */
+body {
+	@apply bg-background text-foreground font-sans;
+}
+:root {
+	--rojo: #d9200d;
+}
+.bg-dark {
+	background-color: rgba(33,37,41,1);
+  }
+
+  #cifras-globales .si {
+	color: var(--rojo);
+	font-weight: bold;
+  }
+  .mouse {
+	width: 25px;
+	height: 45px;
+	border: 2px solid var(--rojo);
+	border-radius:60px;
+	position: relative;
+  }
+  .mouse::before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--rojo);
+	border-radius:50%;
+	opacity: 1;
+	animation:wheel 2s infinite;
+	-webkit-animation:wheel 2s infinite;
+  }
+  @keyframes wheel {
+	to {
+	  opacity: 0;
+	  top: 30px;
+	}
+  }
+  @-webkit-keyframes wheel {
+	to {
+	  opacity: 0;
+	  top: 30px;
+	}
+  }
+
+  .single-proyecto #uno .swiper-slide::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+	left: 0;
+	top: 0;
+	z-index: 1;
+  }
+  .single-proyecto #tres .galeria .swiper-slide::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background:linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+	left: 0;
+	top: 0;
+	z-index: 1;
+  }
+  .single-proyecto .galeria-mini .swiper-slide {
+	opacity: 0.4;
+  }
+
+  .single-proyecto .galeria-mini .swiper-slide-thumb-active,
+  .single-proyecto .galeria-mini .swiper-slide:hover {
+	opacity: 1;
+  }
+
+  .page-template-tpl_sobre-nosotros .main::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  }
+  element {
+	width: 279.2px;
+  
+  }
+  .page-template-tpl_sobre-nosotros #tres .swiper-slide-thumb-active {
+	background-color: var(--rojo) !important;
+	color: white;
+  }
+  #declaracion {
+	font-size: 10pt;
+	display: flex;
+	gap:.5em;
+	line-height: 1;
+	text-align: justify;
+  }
+  .wpcf7 input.wpcf7-text,
+  .wpcf7 input.wpcf7-email,
+  .wpcf7 input.wpcf7-tel {
+	@apply border-gray-300;
+	width: 100%;
+	@apply bg-gray-100;
+	border-radius:5px;
+	padding:.5em;
+	margin-bottom: 1em;
+  }
+
+  .wpcf7 .wpcf7-checkbox {
+	display: flex;
+	flex-direction: column;
+	margin:1em 0;
+  }
+
+  /* .wpcf7 .wpcf7-not-valid-tip {
+	color: #dc3232;
+	font-size: 10pt;
+	font-weight: normal;
+	display: block;
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	right: 0;
+	top: -30px;
+	height: 0;
+  } */
+
+  .wpcf7 .wpcf7-not-valid-tip {
+	font-size: 10pt;
+	margin-top: -10px;
+  }
+  .wpcf7 .wpcf7-submit:disabled {
+	opacity: .25;
+  }
+  .wpcf7-form-control.wpcf7-submit {
+	display: block;
+	width: 100%;
+	background: var(--rojo);
+	padding:.5em;
+	color: white;
+	border-radius:5px;
+	cursor: pointer;
+  }
+  .captcha-image {
+	width: 100%;
+	border:none;
+  }
+
+.button-hub {
+	width: 100%;
+  background-color: white;
+  border: 2px solid var(--rojo);
+  border-radius: 30px;
+  box-shadow: var(--rojo) 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-hub:hover {
+  background-color: #fff;
+}
+
+.button-hub:active {
+  box-shadow: var(--rojo) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.page-template-tpl_hub #masthead {
+    display: none;
+  }
