@@ -10,7 +10,7 @@
 
 ?>
 
-<header id="masthead" class="fixed z-100 w-full flex justify-between items-center p-2 lg:px-5 bg-dark">
+<header id="masthead" class="fixed z-100 w-full flex justify-between items-center p-2 lg:py-0 lg:px-5 bg-dark">
 	<div>
 		<a href="/">
 			<img id="brand" class="brightness-0 invert-100 w-[30vh]" src="https://barreirogarces.com/wp-content/uploads/2021/07/Barreiro-Garces-Letras.png" alt="logo">
