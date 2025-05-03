@@ -28,7 +28,7 @@ get_header(); ?>
                                 </div>
                             <?php endif ?>
                         <?php endwhile; ?>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-y-4">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-y-2 lg:gap-y-4">
                             <img class="block mx-auto w-[125px] border border-white p-2 rounded-tr-[30%] rounded-bl-[30%]" src="<?php the_field('proyecto-logo'); ?>" alt="slider">
                             <h2 class="text-center text-white text-4xl lg:text-7xl font-bold"><?php the_title(); ?></h2>
                             <h3 class="text-center text-white text-2xl lg:text-4xl font-normal"><?php the_field('proyecto-subtitulo'); ?></h3>
@@ -43,11 +43,11 @@ get_header(); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if (have_rows('rep-cifras')) : ?>
-                                <ul class="list-none m-0 text-white text-center flex items-center justify-center gap-5 [&>li:not(:last-child)]:border-r [&>li:not(:last-child)]:pr-8 [&>li:not(:last-child)]:border-white">
+                                <ul class="list-none m-0 text-white text-center grid grid-cols-2 lg:flex items-center justify-center gap-5 lg:[&>li:not(:last-child)]:border-r lg:[&>li:not(:last-child)]:pr-8 lg:[&>li:not(:last-child)]:border-white">
                                     <?php while (have_rows('rep-cifras')) : the_row(); ?>
                                         <li>
-                                            <span class="block text-4xl"><?php the_sub_field('cifra'); ?></span>
-                                            <small class="block text-xl"><?php the_sub_field('detalle_cifra'); ?></small>
+                                            <span class="block text-2xl lg:text-4xl"><?php the_sub_field('cifra'); ?></span>
+                                            <small class="block text-lg lg:text-xl"><?php the_sub_field('detalle_cifra'); ?></small>
                                         </li>
                                     <?php endwhile; ?>
                                 </ul>

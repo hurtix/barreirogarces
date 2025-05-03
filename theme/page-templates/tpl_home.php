@@ -31,8 +31,8 @@ get_header(); ?>
                 <img class="block mx-auto w-[125px] border border-white p-2 rounded-tr-[30%] rounded-bl-[30%] hover:p-0 transition-all" src="<?php the_sub_field('logo'); ?>" alt="<?php echo get_sub_field('titulo'); ?>" />
               </a>
             <?php endif; ?>
-            <h2 class="text-center text-white text-4xl lg:text-5xl font-bold mt-4"><?php the_sub_field('titulo'); ?></h2>
-            <p class="text-center text-white text-3xl lg:text-4xl mb-0"><?php the_sub_field('subtitulo'); ?></p>
+            <h2 class="text-center text-white text-3xl lg:text-5xl font-bold mt-4"><?php the_sub_field('titulo'); ?></h2>
+            <p class="text-center text-white text-2xl lg:text-4xl mb-0"><?php the_sub_field('subtitulo'); ?></p>
           </div>
           <div class="absolute w-full bottom-[5vh] left-0">
             <?php if (get_field('proyecto-descripcion')): ?>
