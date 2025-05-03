@@ -13,7 +13,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="<?php echo wp_is_mobile() ? 'mobile' : 'desktop'; ?>">
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">

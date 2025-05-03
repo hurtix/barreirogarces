@@ -17,15 +17,15 @@ defined('ABSPATH') || exit;
     <!-- <div class="h-10 bg-black w-full"></div> -->
     <div class="relative h-screen flex justify-center flex-col items-center gap-y-5">
       <?php if (is_singular('proyecto')) { ?>
-        <p class="text-center text-gray-900 text-5xl">¿Interesado en <?php echo get_the_title(); ?>?</p>
+        <p class="text-center text-3xl lg:text-5xl">¿Interesado en <?php echo get_the_title(); ?>?</p>
       <?php } else { ?>
-        <p class="text-center text-gray-900 text-5xl">¿Interesado en nuestros proyectos?</p>
+        <p class="text-center text-3xl lg:text-5xl">¿Interesado en nuestros proyectos?</p>
       <?php } ?>
 
-      <a class="border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-4 py-2 rounded transition-colors" data-bs-toggle="offcanvas" href="#formulario" role="button" aria-controls="formulario">Habla con un asesor</a>
+      <a class="border border-gray-900 hover:bg-gray-900 hover:text-white px-4 py-2 rounded transition-colors" data-bs-toggle="offcanvas" href="#formulario" role="button" aria-controls="formulario">Habla con un asesor</a>
     </div>
     <div class="w-full border-t border-gray-300 py-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 [&_.widget]:flex [&_.widget]:justify-center [&_.widget]:items-center [&_.widget]:text-center lg:[&_.widget]:text-left">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 [&_.widget]:flex [&_.widget]:justify-start lg:[&_.widget]:justify-center [&_.widget]:items-start [&_.widget]:text-left px-4 lg:px-0">
         <div class="widget">
           <ul class="list-none m-0">
             <li class="font-bold">Oficinas y Sala de venta</li>

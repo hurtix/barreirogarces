@@ -36,9 +36,9 @@ get_header(); ?>
                                 <div class="mouse cursor-pointer"></div>
                             </div>
                         </div>
-                        <div class="absolute bottom-[5vh] left-0 w-full">
+                        <div class="absolute bottom-[1vh] lg:bottom-[5vh] left-0 w-full">
                             <?php if (get_field('proyecto-descripcion')) : ?>
-                                <div class="text-white mx-auto text-center w-3/4 text-lg">
+                                <div class="text-white mx-auto lg:text-center w-full lg:w-3/4 text-sm lg:text-xl px-4 lg:px-0 text-justify ">
                                     <?php the_field('proyecto-descripcion'); ?>
                                 </div>
                             <?php endif; ?>
@@ -72,11 +72,11 @@ get_header(); ?>
                                         </div>
                                         <div class="col-span-12 lg:col-span-3 flex items-start justify-start border-l border-[#efefef] h-auto lg:h-full">
                                             <div class="w-full pt-5 pl-3">
-                                                <div class="flex gap-4 justify-between items-center mt-0 lg:mt-20 mb-4">
+                                                <div class="hidden lg:flex gap-4 justify-between items-center mt-0 lg:mt-20 mb-4">
                                                     <p class="text-3xl">Planos</p>
                                                     <hr class="w-full mr-4">
                                                 </div>
-                                                <h3 class="font-bold text-2xl mb-4"><?php the_sub_field('proyecto-titulo-pestana'); ?></h3>
+                                                <h3 class="font-bold text-xl lg:text-2xl mb-4"><?php the_sub_field('proyecto-titulo-pestana'); ?></h3>
                                                 <div class="[&_ul]:list-disc [&_ul]:py-4 [&_li]:ml-5">
                                                     <?php the_sub_field('descripcion_plano'); ?>
                                                 </div>
@@ -102,7 +102,7 @@ get_header(); ?>
                                         <?php while (have_rows('proyecto-planos-rep')) : the_row(); ?>
                                             <div class="swiper-slide cursor-pointer">
                                                 <button
-                                                    class="w-full px-4 py-8 text-center border-b-2 cursor-pointer transition-colors duration-300 
+                                                    class="w-full px-4 py-4 lg:py-8 text-center border-b-2 cursor-pointer transition-colors duration-300 
                                             <?php if ($y == 1) echo 'border-[var(--rojo)] text-[var(--rojo)]';
                                             else echo 'border-transparent hover:border-[var(--rojo)] hover:text-[var(--rojo)]'; ?>"
                                                     onclick="showTab('pills-<?php echo $y; ?>')"

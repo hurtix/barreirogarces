@@ -10,7 +10,7 @@
 
 ?>
 
-<header id="masthead" class="fixed z-100 w-full flex justify-between items-center px-5 bg-dark">
+<header id="masthead" class="fixed z-100 w-full flex justify-between items-center p-2 lg:px-5 bg-dark">
 	<div>
 		<a href="/">
 			<img id="brand" class="brightness-0 invert-100 w-[30vh]" src="https://barreirogarces.com/wp-content/uploads/2021/07/Barreiro-Garces-Letras.png" alt="logo">
@@ -61,14 +61,14 @@
 
 
 
-<div class="fixed right-0 top-0 h-full w-full lg:w-1/3 transform translate-x-full transition-transform duration-300 ease-in-out bg-white shadow-lg z-100 px-4 lg:px-8 flex justify-between flex-col" id="formulario" role="dialog" aria-labelledby="formulario">
+<div class="fixed right-0 top-0 h-full w-full lg:w-1/3 transform translate-x-full transition-transform duration-300 ease-in-out bg-white shadow-lg z-100 px-4 lg:px-8 flex justify-between flex-col overflow-auto" id="formulario" role="dialog" aria-labelledby="formulario">
 	<div class="flex justify-between items-start p-4 border-b border-gray-300">
 		<div class="flex items-center">
 			<img class="h-12" src="https://barreirogarces.com/wp-content/uploads/2021/07/Logo_Barreiro_Garces_Vertical.png" alt="favicon">
 			<h5 class="text-3xl font-normal pl-2 pt-3">Contáctenos</h5>
 		</div>
 
-		<button type="button" class="text-gray-400 hover:text-gray-500 cursor-pointer" onclick="closeOffcanvas()" aria-label="Close">
+		<button type="button" class="text-gray-400 hover:text-black cursor-pointer" onclick="closeOffcanvas()" aria-label="Close">
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-8 h-8 bi bi-x-circle" viewBox="0 0 16 16">
 				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
 				<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
