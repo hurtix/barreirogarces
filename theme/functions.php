@@ -284,11 +284,11 @@ function enqueue_alpine_script() {
 add_action('wp_enqueue_scripts', 'enqueue_alpine_script');
 
 
-function enqueue_lightbox_assets() {
-    wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/inc/lightbox/css/lightbox.min.css');
-    wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/inc/lightbox/js/lightbox.min.js', array('jquery'), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_lightbox_assets');
+// function enqueue_lightbox_assets() {
+//     wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/inc/lightbox/css/lightbox.min.css');
+//     wp_enqueue_script('lightbox-js', get_template_directory_uri() . '/inc/lightbox/js/lightbox.min.js', array('jquery'), null, true);
+// }
+// add_action('wp_enqueue_scripts', 'enqueue_lightbox_assets');
 
 function enqueue_swiper_scripts() {
     wp_enqueue_style('swiper-css', get_template_directory_uri() . '/inc/swiper/swiper-bundle.min.css', array(), BARREIROGARCES_VERSION);
