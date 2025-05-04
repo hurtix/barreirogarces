@@ -219,37 +219,37 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Redirige las URLs de uploads locales a producción
  */
-function redirigir_uploads_a_produccion($url) {
-    // Reemplaza la URL local con la URL de producción
-    return str_replace('https://barreirogarces.local/wp-content/uploads', 'https://barreirogarces.com/wp-content/uploads', $url);
-}
+// function redirigir_uploads_a_produccion($url) {
+//     // Reemplaza la URL local con la URL de producción
+//     return str_replace('https://barreirogarces.local/wp-content/uploads', 'https://barreirogarces.com/wp-content/uploads', $url);
+// }
 
-// Aplica el filtro a las URLs de archivos adjuntos
-add_filter('wp_get_attachment_url', 'redirigir_uploads_a_produccion');
+// // Aplica el filtro a las URLs de archivos adjuntos
+// add_filter('wp_get_attachment_url', 'redirigir_uploads_a_produccion');
 
-// Aplica el filtro a las URLs de miniaturas y otros tamaños de imagen
-add_filter('wp_calculate_image_srcset', function($sources) {
-    foreach ($sources as &$source) {
-        $source['url'] = redirigir_uploads_a_produccion($source['url']);
-    }
-    return $sources;
-});
+// // Aplica el filtro a las URLs de miniaturas y otros tamaños de imagen
+// add_filter('wp_calculate_image_srcset', function($sources) {
+//     foreach ($sources as &$source) {
+//         $source['url'] = redirigir_uploads_a_produccion($source['url']);
+//     }
+//     return $sources;
+// });
 
-// Para elementos insertados en el contenido
-add_filter('the_content', function($content) {
-    return str_replace('https://barreirogarces.local/wp-content/uploads', 'https://barreirogarces.com/wp-content/uploads', $content);
-});
+// // Para elementos insertados en el contenido
+// add_filter('the_content', function($content) {
+//     return str_replace('https://barreirogarces.local/wp-content/uploads', 'https://barreirogarces.com/wp-content/uploads', $content);
+// });
 
-// Para CSS inline
-add_filter('style_loader_src', 'redirigir_uploads_a_produccion');
+// // Para CSS inline
+// add_filter('style_loader_src', 'redirigir_uploads_a_produccion');
 
-// Para imágenes de fondo en CSS
-add_filter('wp_get_attachment_image_src', function($image) {
-    if (is_array($image)) {
-        $image[0] = redirigir_uploads_a_produccion($image[0]);
-    }
-    return $image;
-});
+// // Para imágenes de fondo en CSS
+// add_filter('wp_get_attachment_image_src', function($image) {
+//     if (is_array($image)) {
+//         $image[0] = redirigir_uploads_a_produccion($image[0]);
+//     }
+//     return $image;
+// });
 
 /**
  * Disable Gutenberg editor and restore classic editor
